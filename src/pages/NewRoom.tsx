@@ -2,6 +2,7 @@ import IlustrationIMG from '../assets/images/illustration.svg'
 import logoIMG from '../assets/images/WebTalk.png'
 import '../styles/auth.scss'
 import { Button } from '../components/Button'
+import { Link } from 'react-router-dom'
 
 export function NewRoom() {
   return(
@@ -25,7 +26,7 @@ export function NewRoom() {
               </Button>
           </form>
           <p>
-            Quer entrar em uma sala existente? <a href='33333'>Clique Aqui</a>
+            Quer entrar em uma sala existente? <Link to='/'>Clique Aqui</Link>
           </p>
         </div>
       </main>
