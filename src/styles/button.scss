@@ -5,25 +5,25 @@
   font-weight: 500;
   background: rgb(155, 0, 155);
 
-  color:#FFF;
-  display:flex;
+  color: #fff;
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  cursor:pointer;
+  cursor: pointer;
   border: 0;
   transition: filter 0.2s;
-  
+
   img {
-    margin-right : 8px;
+    margin-right: 8px;
   }
 
   &:not(:disabled):hover {
-    filter:brightness(0.9);
+    filter: brightness(0.9);
   }
 
-  &:disabled{
-    opacity:0.6;
+  &:disabled {
+    opacity: 0.6;
     cursor: not-allowed;
   }
 }
