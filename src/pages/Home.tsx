@@ -1,5 +1,5 @@
 import IlustrationIMG from '../assets/images/illustration.svg'
-import logoIMG from '../assets/images/WebTalk.png'
+import logoIMG from '../assets/images/WebTalk2.png'
 
 import { Button } from '../components/Button'
 //import { auth } from '../services/firebase'
