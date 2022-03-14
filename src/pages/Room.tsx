@@ -6,8 +6,9 @@ import '../styles/room.scss'
 import { FormEvent, useEffect, useState } from 'react'
 import { useAuth } from '../hooks/useAuth'
 import { database } from '../services/firebase'
+import { Question } from '../components/Questions'
 
-type Questions = {
+type QuestionsType = {
   id:string;
   author: {
     name: string;
@@ -39,7 +40,7 @@ export function Room(){
   const params = useParams<Myparams>() as Myparams;
   const roomID = params.id
   const [newQuestion, setNewQuestion] = useState('')
-  const [ questions, setQuestions] = useState<Questions[]>([])
+  const [ questions, setQuestions] = useState<QuestionsType[]>([])
   const [title, setTitle] = useState('')
 
   useEffect(() => {
@@ -121,7 +122,17 @@ export function Room(){
           </div>
         </form>
 
-              {JSON.stringify(questions)}
+        <div className="question-list">
+          {questions.map(question => {
+              return(
+                <Question 
+                key={question.id}
+                content={question.content}
+                author = { question.author}
+                />
+              )
+            })}
+        </div>
       </main>
     </div>
   )
